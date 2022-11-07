@@ -1,0 +1,222 @@
+:root {
+    --titles: 'Montserrat Alternates', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0b0b;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+nav {
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    z-index: 2;
+}
+
+#featured-recommended {
+    width: 100vw;
+    position: relative;
+}
+
+#featured-recommended .fr-slider {
+    display: flex;
+}
+
+#featured-recommended .fr-item img {
+    width: 100vw;
+    height: 50vh;
+    opacity: .9;
+}
+
+#featured-recommended .fr-item-details {
+    position: absolute;
+    bottom: 0;
+    padding: 1.5rem;
+    width: 100vw;
+    background: linear-gradient(to top, #0b0b0b, transparent);
+}
+
+#featured-recommended .fr-item-details h3 {
+    font-size: 1rem;
+    color: #0d88be;
+}
+
+#featured-recommended .slider-lines {
+    position: absolute;
+    bottom: 2px;
+    width: 100vw;
+    height: 2px;
+    background: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#featured-recommended .slider-lines .line {
+    display: block;
+    height: 2px;
+    width: 100%;
+}
+
+#featured-recommended .slider-lines .line[data-active] {
+    background: #888888;
+}
+
+
+
+#search-bar {
+    width: 100vw;
+    padding: .9rem 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#search-bar input {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 1rem;
+    border: 1px solid #222;
+    border-radius: 4px;
+    outline: none;
+    background: #111;
+    color: #3a3a3c;
+    font-size: .9rem;
+}
+
+#search-bar span {
+    position: absolute;
+    right: 2rem;
+    scale: .9;
+    font-weight: bold;
+}
+
+
+
+#browse-steam {
+    padding: .9rem 1rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+} 
+
+#browse-steam div {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: .5rem;
+}
+
+#browse-steam div button {
+    height: 7rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.794);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    transition: all .2s linear;
+}
+
+#browse-steam div button:hover {
+    background-color: rgba(0, 0, 0, 0.394);
+}
+
+#browse-steam div button span {
+    font-size: 2rem;
+}
+
+#browse-steam div button h2 {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+#browse-steam div button img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .2s linear;
+}
+
+
+
+#browse-games {
+    padding: .9rem 1rem;
+    background: #0b0b0b;
+}
+
+#browse-games .games-nav-bar {
+    display: flex;
+    gap: 1rem;
+}
+
+#browse-games .games-nav-bar span {
+    border: 1px solid #1f1f1f;
+    border-radius: 20px;
+    padding: .44rem .74rem;
+    font-size: .79rem;
+    font-weight: 900;
+}
+
+#browse-games .games-nav-bar span[data-active] {
+    background: white;
+    color: black;
+}
+
+#browse-games ul {
+    list-style: none;
+}
+
+#browse-games .game {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#browse-games .game img {
+    height: 4rem;
+    border-radius: 6px;
+}
+
+#browse-games .game .details h1 {
+    font-size: 1rem;
+    font-family: var(--titles);
+    font-weight: 600;
+}
+
+#browse-games .game .details h3 {
+    font-size: .8rem;
+    font-weight: 500;
+    opacity: .8;
+}
+
+#browse-games .game .details h5 {
+    font-size: .8rem;
+    font-weight: 500;
+
+}
+
+#browse-games .game .details h5 span {
+    color: #0d88be;
+}
