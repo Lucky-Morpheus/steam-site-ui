@@ -25,20 +25,51 @@ nav {
     justify-content: space-between;
     padding: 1rem;
     z-index: 2;
+    font-family: monospace;
+}
+
+nav .dropdown-menu {
+    background: #151515EF;
+    position: absolute;
+    right: 3rem;
+    display: none;
+    flex-direction: column;
+    gap: .7rem;
+    padding: 1rem;
+    border: 1px solid #3a3a3c;
+    border-radius: 6px;
+    translate: 20%;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .25s ease-out;
+}
+
+nav .dropdown-menu a {
+    text-decoration: none;
+    color: #0d88be;
+    transition: all .1s linear;
+}
+
+nav .dropdown-menu a:hover {
+    color: white;
 }
 
 #featured-recommended {
     width: 100vw;
     position: relative;
+    overflow: hidden;
 }
 
 #featured-recommended .fr-slider {
+    list-style: none;
     display: flex;
+    touch-action: pinch-zoom;
+    transition: all 1s ease-out;
 }
 
 #featured-recommended .fr-item img {
+    margin-top: 1rem;
     width: 100vw;
-    height: 50vh;
     opacity: .9;
 }
 
@@ -55,10 +86,26 @@ nav {
     color: #0d88be;
 }
 
+#featured-recommended .arrows {
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 2.7rem;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    opacity: 1;
+}
+
+#featured-recommended .arrows span {
+    padding: 3rem 2.2rem;
+    transition: opacity .2s linear;
+}
+
 #featured-recommended .slider-lines {
     position: absolute;
     bottom: 2px;
-    width: 100vw;
+    width: 100%;
     height: 2px;
     background: #151515;
     display: flex;
@@ -70,9 +117,10 @@ nav {
     display: block;
     height: 2px;
     width: 100%;
+    transition: all .3s ease-in;
 }
 
-#featured-recommended .slider-lines .line[data-active] {
+#featured-recommended .slider-lines .line.active {
     background: #888888;
 }
 
@@ -167,7 +215,7 @@ nav {
 
 #browse-games .games-nav-bar {
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
 }
 
 #browse-games .games-nav-bar span {
@@ -176,9 +224,10 @@ nav {
     padding: .44rem .74rem;
     font-size: .79rem;
     font-weight: 900;
+    transition: all .1s ease-out;
 }
 
-#browse-games .games-nav-bar span[data-active] {
+#browse-games .games-nav-bar span.active {
     background: white;
     color: black;
 }
@@ -194,6 +243,10 @@ nav {
     gap: 1rem;
 }
 
+#browse-games .game.model {
+    display: none;
+}
+
 #browse-games .game img {
     height: 4rem;
     border-radius: 6px;
@@ -201,11 +254,11 @@ nav {
 
 #browse-games .game .details h1 {
     font-size: 1rem;
-    font-family: var(--titles);
     font-weight: 600;
 }
 
 #browse-games .game .details h3 {
+    margin-top: 2px;
     font-size: .8rem;
     font-weight: 500;
     opacity: .8;
