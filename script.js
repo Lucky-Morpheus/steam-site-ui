@@ -54,7 +54,26 @@ const arrows = document.querySelectorAll('#featured-recommended .arrows span')
 const lines = document.querySelectorAll('.slider-lines .line')
 
 // Globals
-const sliderPositions = ['0', '-100vw', '-200vw', '-300vw']
+var widthToMove = {
+    amount: 0,
+    sufix: 'px'
+}
+
+function setWidthToMoveTheSlider(pageType) {
+    const pageArea = document.getElementById('page-area')
+    const width = parseFloat(getComputedStyle(pageArea).getPropertyValue("--width"))
+
+    if (width === 480) {
+        widthToMove.amount = 480
+        widthToMove.sufix = 'px'
+    }
+    else {
+        widthToMove.amount = 100
+        widthToMove.sufix = 'vw'
+    }
+} setWidthToMoveTheSlider()
+
+const sliderPositions = ['0', `-${widthToMove.amount}${widthToMove.sufix}`, `-${widthToMove.amount * 2}${widthToMove.sufix}`, `-${widthToMove.amount * 3}${widthToMove.sufix}`]
 var currentSliderPos = 0
 var timeToAutoSlide = 4
 
