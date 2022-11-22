@@ -12,89 +12,91 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <h1>Steam</h1>
-        <span class="material-symbols-outlined">menu</span>
-        <div class="dropdown-menu show">
-            <a href="#">Your Store</a>
-            <a href="#">News & Noteworthy</a>
-            <a href="#">Categories</a>
-            <a href="#">Points Shop</a>
-            <a href="#">Labs</a>
+    <div id="page-area">
+        <nav>
+            <h1>Steam</h1>
+            <span class="material-symbols-outlined">menu</span>
+            <div class="dropdown-menu show">
+                <a href="#">Your Store</a>
+                <a href="#">News & Noteworthy</a>
+                <a href="#">Categories</a>
+                <a href="#">Points Shop</a>
+                <a href="#">Labs</a>
+            </div>
+        </nav>
+    
+        <section id="featured-recommended">
+            <ul class="fr-slider">
+                <li class="fr-item">
+                    <img src="">
+                    <div class="fr-item-details">
+                        <h1>Cybermonk 2099</h1>
+                        <h3>$59.99</h3>
+                    </div>
+                </li>
+            </ul>
+            <div class="arrows">
+                <span class="material-symbols-outlined">arrow_back_ios</span>
+                <span class="material-symbols-outlined">arrow_forward_ios</span>
+            </div>
+            <div class="slider-lines">
+                <div class="line active"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </section>
+    
+        <div id="search-bar">
+            <input type="text" placeholder="Search">
+            <span class="material-symbols-outlined">search</span>
         </div>
-    </nav>
-
-    <section id="featured-recommended">
-        <ul class="fr-slider">
-            <li class="fr-item">
-                <img src="">
-                <div class="fr-item-details">
-                    <h1>Cybermonk 2099</h1>
-                    <h3>$59.99</h3>
-                </div>
-            </li>
-        </ul>
-        <div class="arrows">
-            <span class="material-symbols-outlined">arrow_back_ios</span>
-            <span class="material-symbols-outlined">arrow_forward_ios</span>
-        </div>
-        <div class="slider-lines">
-            <div class="line active"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-    </section>
-
-    <div id="search-bar">
-        <input type="text" placeholder="Search">
-        <span class="material-symbols-outlined">search</span>
+    
+        <section id="browse-steam">
+            <div>
+                <button class="browse-button" data-new>
+                    <img src="PhImgs/Scarecrow.jpg">
+                    <span class="material-symbols-outlined">bolt</span>
+                    <h2>NEW</h2>
+                </button>
+                <button class="browse-button" data-tags>
+                    <img src="PhImgs/Chris.jpg">
+                    <span class="material-symbols-outlined">sell</span>
+                    <h2>TAGS</h2>
+                </button>    
+            </div>
+            <div>
+                <button class="browse-button" data-specials>
+                    <img src="PhImgs/image2.jpg">
+                    <span class="material-symbols-outlined">percent</span>
+                    <h2>SPECIALS</h2>
+                </button>
+                <button class="browse-button" data-free>
+                    <img src="PhImgs/image.jpg">
+                    <span class="material-symbols-outlined">temp_preferences_custom</span>
+                    <h2>FREE</h2>
+                </button>
+            </div>
+        </section>
+    
+        <section id="browse-games">
+            <div class="games-nav-bar">
+                <span class="active">NEW</span>
+                <span class="">TRENDING</span>
+                <span class="">TOP</span>
+                <span class="">UPCOMING</span>
+            </div>
+            <ul>
+                <li class="game model">
+                    <img src="">
+                    <div class="details">
+                        <h1>Stray Panda</h1>
+                        <h3>Adventure ・ Casual</h3>
+                        <h5><span>$29.99</span> ・ 100%</h5>
+                    </div>
+                </li>
+            </ul>
+        </section>
     </div>
-
-    <section id="browse-steam">
-        <div>
-            <button class="browse-button" data-new>
-                <img src="PhImgs/Scarecrow.jpg">
-                <span class="material-symbols-outlined">bolt</span>
-                <h2>NEW</h2>
-            </button>
-            <button class="browse-button" data-tags>
-                <img src="PhImgs/Chris.jpg">
-                <span class="material-symbols-outlined">sell</span>
-                <h2>TAGS</h2>
-            </button>    
-        </div>
-        <div>
-            <button class="browse-button" data-specials>
-                <img src="PhImgs/image2.jpg">
-                <span class="material-symbols-outlined">percent</span>
-                <h2>SPECIALS</h2>
-            </button>
-            <button class="browse-button" data-free>
-                <img src="PhImgs/image.jpg">
-                <span class="material-symbols-outlined">temp_preferences_custom</span>
-                <h2>FREE</h2>
-            </button>
-        </div>
-    </section>
-
-    <section id="browse-games">
-        <div class="games-nav-bar">
-            <span class="active">NEW</span>
-            <span class="">TRENDING</span>
-            <span class="">TOP</span>
-            <span class="">UPCOMING</span>
-        </div>
-        <ul>
-            <li class="game model">
-                <img src="PhImgs/background.png">
-                <div class="details">
-                    <h1>Stray Panda</h1>
-                    <h3>Adventure ・ Casual</h3>
-                    <h5><span>$29.99</span> ・ 100%</h5>
-                </div>
-            </li>
-        </ul>
-    </section>
 </body>
 </html>
