@@ -1,11 +1,42 @@
-:root {
-    --titles: 'Montserrat Alternates', sans-serif;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #202026;
+    border-radius: 2px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #343740;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #595962;
+}
+
+#page-area {
+    --width: 480;
+
+    max-width: 480px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #202026;
+}
+
+@media (max-width: 480px) {
+    #page-area {
+        --width: 100;
+
+        width: 100vw;
+        border: none;
+    }
 }
 
 body {
@@ -13,11 +44,13 @@ body {
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    display: grid;
+    place-items: center;
 }
 
 nav {
     background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
-    width: 100vw;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -55,7 +88,7 @@ nav .dropdown-menu a:hover {
 }
 
 #featured-recommended {
-    width: 100vw;
+    width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -63,21 +96,25 @@ nav .dropdown-menu a:hover {
 #featured-recommended .fr-slider {
     list-style: none;
     display: flex;
-    touch-action: pinch-zoom;
     transition: all 1s ease-out;
 }
 
 #featured-recommended .fr-item img {
-    margin-top: 1rem;
-    width: 100vw;
+    width: 480px;
     opacity: .9;
+}
+
+@media (max-width: 480px) {
+    #featured-recommended .fr-item img {
+        width: 100vw;
+    }
 }
 
 #featured-recommended .fr-item-details {
     position: absolute;
     bottom: 0;
     padding: 1.5rem;
-    width: 100vw;
+    width: 100%;
     background: linear-gradient(to top, #0b0b0b, transparent);
 }
 
@@ -88,10 +125,10 @@ nav .dropdown-menu a:hover {
 
 #featured-recommended .arrows {
     color: white;
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 2.7rem;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     opacity: 1;
@@ -127,7 +164,7 @@ nav .dropdown-menu a:hover {
 
 
 #search-bar {
-    width: 100vw;
+    width: 100%;
     padding: .9rem 1rem;
     position: relative;
     display: flex;
@@ -157,7 +194,7 @@ nav .dropdown-menu a:hover {
 
 #browse-steam {
     padding: .9rem 1rem;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: .5rem;
